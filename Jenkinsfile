@@ -1,9 +1,10 @@
 pipeline {
     agent any
 
-    environment {
-        // CHANGE THIS to your Docker Hub username
+        environment {
         DOCKER_IMAGE = 'pugazhmsp/rice-traders-app:latest'
+        PATH = "D:\\apache-maven-3.9.16\\bin;C:\\Program Files\\Docker\\Docker\\resources\\bin;${env.PATH}"
+        KUBECONFIG = 'C:\\Users\\pugaz\\.kube\\config'
     }
 
     stages {
